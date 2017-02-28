@@ -1,0 +1,30 @@
+
+<div class="w3-content" style="max-width:400px">
+  <div class="mySlides w3-container w3-red" >
+    <h1 ><b >Afinal que posto usar? </b></h1>
+    <h2><i>Entre em nosso sistema e lhe diremos, clique no botão abaixo</i></h2>
+ <%= link_to "Cadastre-se", new_user_registration_path,  class: "btn btn-default" ,:style=> 'color: black;'  %>
+  </div>
+  <div class="mySlides w3-container w3-blue">
+      <p>This is some text that is placed in the transparent box.</p>
+  </div>
+
+
+</div>
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000);
+}
+</script>

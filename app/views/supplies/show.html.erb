@@ -1,0 +1,35 @@
+<%- model_class = Supply -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:date) %>:</strong></dt>
+  <dd><%= @supply.date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:gasStation) %>:</strong></dt>
+  <dd><%= @supply.gasStation %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:km) %>:</strong></dt>
+  <dd><%= @supply.km %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:liter) %>:</strong></dt>
+  <dd><%= @supply.liter %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:fuel) %>:</strong></dt>
+  <dd><%= @supply.fuel %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
+  <dd><%= @supply.price %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:owner) %>:</strong></dt>
+  <dd><%= @supply.owner %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
+  <dd><%= @supply.user_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:car_id) %>:</strong></dt>
+  <dd><%= @supply.car_id %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              supplies_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_supply_path(@supply), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              supply_path(@supply),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

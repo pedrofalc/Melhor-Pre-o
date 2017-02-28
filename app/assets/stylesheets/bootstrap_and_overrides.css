@@ -1,0 +1,56 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Static version of css will use Glyphicons sprites by default
+  =require twitter-bootstrap-static/sprites
+*/
+ul.navbar-nav{
+    float:right;
+    margin: 0;
+}
+a.navbar-link{
+
+  font-size:large;
+}
+a.btn.btn-primary{
+
+background-color:#c9302c;
+
+}
+div.mySlides.w3-container.w3-red{
+    background-color: #DCDCDC;
+     background-image:url("/posto3.jpg");
+     background-repeat: no-repeat;
+     background-position: center bottom;;
+    width: 914px;
+    height: 500px;
+      text-align: center;
+
+}
+
+div.mySlides.w3-container.w3-blue{
+       background-image:url("/posto2.jpg");
+    background-repeat: no-repeat;
+    width: 914px;
+    height: 500px;
+    border: 1px solid black;
+    opacity: 0.6;
+    
+}
+div.mySlides.w3-container.w3-blue p{
+  margin: 5%;
+     font-weight: bold;
+     color: #000000;
+}
+div.row{
+margin-left: 90px;
+margin-right: -15px;
+
+}
+a.btn.btn-default{
+margin-left:0px;
+margin-block-start: 240px;
+height: 40px;
+width: 200px;
+
+}
