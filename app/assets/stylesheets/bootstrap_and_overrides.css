@@ -58,5 +58,6 @@ div.home{
 	width:700px;
 	position:absolute;
 	left:50%;
-	margin-left:-350px;
+	margin-left:-250px;
+  top:200px;
 }
