@@ -25,9 +25,9 @@
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
-              supplies_path, :class => 'btn btn-default'  %>
+              supplies_path, :class => 'btn btn-primary'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_supply_path(@supply), :class => 'btn btn-default' %>
+              edit_supply_path(@supply), :class => 'btn btn-warning' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               supply_path(@supply),
               :method => 'delete',
