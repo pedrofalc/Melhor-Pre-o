@@ -57,33 +57,22 @@
     </div>
     <%=f.error_span(:price) %>
   </div>
+
   <div class="form-group">
-    <%= f.label :owner, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :owner, :class => 'form-control' %>
-    </div>
-    <%=f.error_span(:owner) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :user_id, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :user_id, :class => 'form-control' %>
-    </div>
-    <%=f.error_span(:user_id) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :car_id, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :car_id, :class => 'form-control' %>
-    </div>
-    <%=f.error_span(:car_id) %>
-  </div>
+     <%= f.label :car, :class => 'control-label col-lg-2' %>
+     <div class="col-lg-10">
+       <%= f.collection_select(:car_id, Car.where("user_id = ?", current_user.id),
+                                           :id, :plate, :prompt => true) %>
+     </div>
+     <%=f.error_span(:car_id) %>
+ </div>
+
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
       <%= f.submit nil, :class => 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                supplies_path, :class => 'btn btn-default' %>
+                supplies_path, :class => 'btn btn-danger' %>
     </div>
   </div>
 
