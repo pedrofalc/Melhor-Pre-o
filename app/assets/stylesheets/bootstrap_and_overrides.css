@@ -35,7 +35,7 @@ div.mySlides.w3-container.w3-blue{
     height: 500px;
     border: 1px solid black;
     opacity: 0.6;
-    
+
 }
 div.mySlides.w3-container.w3-blue p{
   margin: 5%;
@@ -52,5 +52,9 @@ margin-left:0px;
 margin-block-start: 240px;
 height: 40px;
 width: 200px;
+
+}
+div.home{
+margin-top: 100px;
 
 }
