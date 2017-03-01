@@ -54,3 +54,9 @@ height: 40px;
 width: 200px;
 
 }
+div.home{
+	width:700px
+	position:absolute;
+	left:50%;
+	margin-left:-350px;
+}
