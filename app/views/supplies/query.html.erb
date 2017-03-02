@@ -1,0 +1,37 @@
+<%- model_class = Supply -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+
+      <th><%= model_class.human_attribute_name(:date) %></th>
+      <th><%= model_class.human_attribute_name(:gasStation) %></th>
+      <th>Média de Consumo</th>
+      <th>Rentabilidade</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @supplies.each do |supply| %>
+      <tr>
+
+        <td><%= supply.date %></td>
+        <td><%= supply.gasStation %></td>
+        <td><%= format("%.2f",supply.km/supply.liter)%></td>
+        <td><%= supply.km/supply.price%></td>
+
+
+
+
+
+
+
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Abastecimentos", supplies_path,  class: "btn btn-success" ,:style=> 'color: black;'  %>

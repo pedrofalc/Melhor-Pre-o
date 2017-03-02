@@ -1,7 +1,7 @@
   class SuppliesController < ApplicationController
-  before_action :set_supply, only: [:show, :edit, :update, :destroy] 
-  before_action :authenticate_user!, only: [:new,:show, :edit, :update, :destroy] 
-  
+  before_action :set_supply, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new,:show, :edit, :update, :destroy]
+
 
   # GET /supplies
   # GET /supplies.json
@@ -23,12 +23,15 @@
   def edit
   end
 
+def query
+  @supplies = Supply.all
+end
   # POST /supplies
   # POST /supplies.json
   def create
     @supply = Supply.new(supply_params)
-     @supply.user_id = current_user.id   
-     
+     @supply.user_id = current_user.id
+
     respond_to do |format|
       if @supply.save
         format.html { redirect_to @supply, notice: 'Supply was successfully created.' }
@@ -75,4 +78,3 @@
       params.require(:supply).permit(:date, :gasStation,:car_id, :km, :liter, :fuel, :price)
     end
 end
-  
